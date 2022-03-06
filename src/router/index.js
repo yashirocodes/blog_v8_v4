@@ -43,6 +43,20 @@ const routes = [
     }]
   },
   {
+    path:'/administrador/:',
+    name:'AdmMaster',
+    component: () => import('../views/administrator/AdminMaster.vue'),
+    children:[{
+      path:'simple',
+      name:'AdminSimple',
+      component: () => import('../views/administrator/AdminSimple.vue')
+    },{
+      path:'avanzado',
+      name:'AdminAdvance',
+      component: () => import('../views/administrator/AdminAdvance.vue')
+    }]
+  },
+  {
     path:'/:catchAll(.*)',
     name:'ErrorNotFound',
     component:() => import('../views/ErrorNotFound.vue')
