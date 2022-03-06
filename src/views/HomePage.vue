@@ -9,7 +9,7 @@
       </div>
     </header>
     <div class="container flexed text-center my-5">
-      <router-link class="linkto" to="post/1">
+      <router-link class="linkto" to="/blog/1">
         <img
           src="https://www.ventos.site/wp-content/uploads/2021/10/2022-chevrolet-blazer-rs-4wd-suv-angular-front.png"
           alt=""
