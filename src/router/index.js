@@ -9,13 +9,27 @@ const routes = [
     component: HomePage
   },
   {
+    path:"/home",
+    redirect:"/"
+  },
+  {
+    path:"/inicio",
+    redirect:"/"
+  },
+  {
+    path:"/portada",
+    redirect:"/"
+  },
+  {
     path:'/about',
     name:'AboutMe',
+    alias:['/sobremi','/acerca'],
     component: () => import('../views/AboutMe.vue')
   },
   {
     path:'/contact',
     name:'ContactMe',
+    alias:['/contacto', '/contactame'],
     component:() => import('../views/ContactMe.vue')
   },
   {
@@ -27,8 +41,12 @@ const routes = [
       name:'MyArticle',
       component: () => import('../views/blogs/MyArticle.vue')
     }]
+  },
+  {
+    path:'/:catchAll(.*)',
+    name:'ErrorNotFound',
+    component:() => import('../views/ErrorNotFound.vue')
   }
-  
 ]
 
 const router = createRouter({
